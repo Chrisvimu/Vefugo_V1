@@ -64,8 +64,12 @@
   <div id="content2"></div>
 
   <script src="/scripts/scripts.js"></script>
-  <script>    loadHTMLContent('home.html', 'content1');</script>
-  <script>    loadHTMLContent('corporative_services.html', 'content2');</script>
+  <script> 
+    document.addEventListener('DOMContentLoaded', function(){
+      loadHTMLContent('home.html', 'content1');
+      loadHTMLContent('corporative_services.html', 'content2');
+    });
+  </script>
 
 </body>
 </html>
