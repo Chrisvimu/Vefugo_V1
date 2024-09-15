@@ -1,35 +1,71 @@
+<!--
+
+  This is the main HTML file for the Vefugo website. It contains the structure and styling of the webpage.
+
+  The file includes the following sections:
+  - Head: Contains the title of the webpage.
+  - Styles: Defines the CSS styles for the webpage, including the background color, text color, and various element styles.
+  - Body: Contains the content of the webpage, including headings, images, and a dark mode toggle button.
+  - Script: Includes a JavaScript function to toggle the dark mode.
+
+  The webpage is designed to showcase images of a beautiful home and provide a dark mode option for better user experience.
+
+  Author: [Christian Villarroel]
+  Version: [1]
+  Date: [2024-09-15 16:33]
+-->
 <!DOCTYPE html>
 <html>
 <head>
   <title>Vefugo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Section</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style_corporative_services.css">
 </head>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    h1 {
-      color: pink;
-      background-color: yellow;
-      padding: 10px;
-      text-align: center;
-    }
-  img {
-    display: block;
-    margin: 30px auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  </style>
 <body>
-    <h1>VEFUGO</h1>
+  <!-- Navbar -->
+  <div class="navbar">
+    <ul class="menu">
+      <li class="menu-item"><a href="home.html">Home</a></li>
+      <li class="menu-item">Acerca
+        <ul class="submenu">
+          <li class="submenu-item">Equipo</li>
+          <li class="submenu-item">Compañia</li>
+        </ul>
+      </li>
+      <li class="menu-item">Servicios
+        <ul class="submenu">
+          <li class="submenu-item">Punto de Reciclaje</li>
+          <li class="submenu-item">Eventos para Empresas</li>
+          <li class="submenu-item">Activacion punto de marca</li>
+          <li class="submenu-item">Customizado Textil</li>
+          <li class="submenu-item"><a href="corporative_services.html">Regalos coorporativos</a></li>
+        </ul>
+      </li>
+      <li class="menu-item">Contacto</li>
+        <ul class="submenu">
+          <li class="submenu-item">Donaciones y Reciclaje</li>
+          <li class="submenu-item">Empresas</li>
+        </ul>
+      <li class="menu-item">Cotizacion</li>
+      <button class="dark-mode-button" onclick="toggleDarkMode()" style="position: absolute; top: 0; right: 0; font-size: 20px;"></button>
+    </ul>
+  </div>
+
+
+  <h1>VEFUGO</h1>
+
   <h2>Hello from Docker (Unix Commands Version)!</h2>
   <h2>Hola Amorcita, ya esta el esqueleto!!</h2>
 
-<!-- Image at the bottom of the page -->
-<img src='images/te-amo.jpeg'>
+  <div id="content1"></div>
+  <div id="content2"></div>
 
+  <script src="/scripts/scripts.js"></script>
+  <script>    loadHTMLContent('home.html', 'content1');</script>
+  <script>    loadHTMLContent('corporative_services.html', 'content2');</script>
 
 </body>
 </html>
