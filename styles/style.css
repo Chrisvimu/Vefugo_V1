@@ -26,7 +26,7 @@ body.dark-mode {
 
 .menu-item {
     position: relative;
-    padding: 15px 20px;
+    padding: 2% 3%; /* Adjust padding based on percentage */
     color: white;
     cursor: pointer;
 }
@@ -48,7 +48,7 @@ body.dark-mode {
 }
 
 .submenu-item {
-    padding: 10px 20px;
+    padding: 1% 2%; /* Adjust padding based on percentage */
     color: white;
     cursor: pointer;
 }
@@ -83,16 +83,17 @@ body.dark-mode {
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 2em; /* Adjust font size using relative units */
     display: flex;
     justify-content: center;
     align-items: center;
     
     /* Square styling */
-    width: 40px;
-    height: 40px;
+    width: 1.4em; /* Adjust width using relative units */
+    height: 1.4em; /* Adjust height using relative units */
     border-radius: 5px; /* Optional, for rounded edges */
-    margin-right: 20px; /* To add spacing on the right side of the navbar */
+    margin-right: 2%; /* To add spacing on the right side of the navbar */
+    margin-left: auto; /* To push the button to the right side of the navbar */
 }
 
 .dark-mode-button:hover {
