@@ -1,0 +1,5 @@
+Objetivos:
+
+Poner una pagina muy basica en HTML para que podamos maquetear la idea.
+
+Publicarla via github para testeo.
