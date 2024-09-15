@@ -10,34 +10,7 @@
 
 <body>
     <!-- Navbar -->
-    <div class="navbar">
-      <ul class="menu">
-        <li class="menu-item"><a href="home.html">Home</a></li>
-        <li class="menu-item">Acerca
-          <ul class="submenu">
-            <li class="submenu-item">Equipo</li>
-            <li class="submenu-item">Compañia</li>
-          </ul>
-        </li>
-        <li class="menu-item">Servicios
-          <ul class="submenu">
-            <li class="submenu-item">Punto de Reciclaje</li>
-            <li class="submenu-item">Eventos para Empresas</li>
-            <li class="submenu-item">Activacion punto de marca</li>
-            <li class="submenu-item"><a href="customization_services.html">Customizado Textil</a></li>
-            <li class="submenu-item"><a href="corporative_services.html">Regalos coorporativos</a></li>
-          </ul>
-        </li>
-        <li class="menu-item">Contacto</li>
-          <ul class="submenu">
-            <li class="submenu-item">Donaciones y Reciclaje</li>
-            <li class="submenu-item">Empresas</li>
-          </ul>
-        <li class="menu-item">Cotizacion</li>
-        <button class="dark-mode-button" onclick="toggleDarkMode()" style="position: absolute; top: 0; right: 0; font-size: 20px;"></button>
-      </ul>
-    </div>
-  
+    <div id="navbar-placeholder"></div>
 
     <section id="servicios-corporativos" class="corporate-services">
         <h2>KreA - Servicios Textiles Corporativos</h2>
@@ -68,4 +41,9 @@
       
 
   <script src="scripts/scripts.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      loadHTMLContent('html_components/navbar.html', 'navbar-placeholder');
+    });
+  </script>
 </body>
