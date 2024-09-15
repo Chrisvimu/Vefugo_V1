@@ -1,0 +1,109 @@
+/* Default light mode styles */
+body {
+    background-color: white;
+    color: black;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+/* Menu Container */
+.menu-container {
+    position: relative;
+}
+
+/* Main Menu */
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: #333;
+}
+
+.menu-item {
+    position: relative;
+    padding: 15px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #575757;
+}
+
+/* Submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+}
+
+.submenu-item {
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.submenu-item:hover {
+    background-color: #575757;
+}
+
+/* Show submenu on hover */
+.menu-item:hover .submenu {
+    display: block;
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 0 0;
+    margin: 0 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Dark Mode Button Styles */
+.dark-mode-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Square styling */
+    width: 40px;
+    height: 40px;
+    border-radius: 5px; /* Optional, for rounded edges */
+    margin-right: 20px; /* To add spacing on the right side of the navbar */
+}
+
+.dark-mode-button:hover {
+    background-color: #666;
+}
+
+/* Styling for light and dark mode icon toggle */
+.dark-mode-button:before {
+    content: '🌙'; /* Default to moon icon for light mode */
+}
+
+body.dark-mode .dark-mode-button:before {
+    content: '☀️'; /* Sun icon for dark mode */
+}
