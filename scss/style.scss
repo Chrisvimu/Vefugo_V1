@@ -1,0 +1,183 @@
+// Variables
+$background-light: #f5f5f5;
+$background-dark: black;
+$text-light: #333;
+$text-dark: white;
+$text-secondary: #555;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$menu-background: #333;
+$menu-hover-background: #575757;
+$dark-mode-btn-background: #444;
+$dark-mode-btn-hover: #666;
+
+// Responsive breakpoints
+$mobile-breakpoint: 768px;
+
+// Global Styles
+body {
+  background-color: white;
+  color: black;
+
+  &.dark-mode {
+    background-color: $background-dark;
+    color: $text-dark;
+  }
+}
+
+// Corporate Services Section
+.corporate-services {
+  background-color: $background-light;
+  padding: 4%;
+  margin: 2% auto;
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px $shadow-color;
+
+  h2 {
+    font-size: 2em;
+    color: $text-light;
+  }
+
+  p {
+    font-size: 1.1em;
+    color: $text-secondary;
+    line-height: 1.6;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 2%;
+
+    li {
+      margin-bottom: 1em;
+      font-size: 1.1em;
+      color: $text-light;
+    }
+  }
+
+  h3 {
+    font-size: 1.5em;
+    margin-top: 2em;
+    color: $text-light;
+  }
+
+  strong {
+    color: #000;
+  }
+
+  em {
+    color: $text-secondary;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 6%;
+    h2 {
+      font-size: 1.8em;
+    }
+    p, li {
+      font-size: 1em;
+    }
+    h3 {
+      font-size: 1.3em;
+    }
+  }
+}
+
+// Menu Styles
+.menu-container {
+  position: relative;
+
+  .menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: $menu-background;
+
+    .menu-item {
+      position: relative;
+      padding: 2% 3%;
+      color: $text-dark;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $menu-hover-background;
+      }
+
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: $menu-background;
+
+        .submenu-item {
+          padding: 1% 2%;
+          color: $text-dark;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $menu-hover-background;
+          }
+        }
+      }
+
+      &:hover .submenu {
+        display: block;
+      }
+    }
+  }
+}
+
+// Navbar Styles
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $menu-background;
+  padding: 0;
+  margin: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+  }
+}
+
+// Dark Mode Button
+.dark-mode-button {
+  background-color: $dark-mode-btn-background;
+  color: $text-dark;
+  border: none;
+  cursor: pointer;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 5px;
+  margin-right: 2%;
+  margin-left: auto;
+
+  &:hover {
+    background-color: $dark-mode-btn-hover;
+  }
+
+  &:before {
+    content: '🌙'; // Default to moon icon for light mode
+  }
+
+  body.dark-mode & {
+    &:before {
+      content: '☀️'; // Sun icon for dark mode
+    }
+  }
+}

@@ -15,14 +15,14 @@
   Date: [2024-09-15 16:33]
 -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Vefugo</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Section</title>
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/style_corporative_services.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- Navbar -->
@@ -39,11 +39,12 @@
 
   <script src="scripts/scripts.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      loadHTMLContent('html_components/navbar.html', 'navbar-placeholder');
-      loadHTMLContent('html_sections/home.html', 'content1')
-      loadHTMLContent('html_sections/corporative_services.html', 'content2');
-    });
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM fully loaded and parsed");
+    loadHTMLContent('html_components/navbar.html', 'navbar-placeholder');
+    loadHTMLContent('html_sections/home.html', 'content1');
+    loadHTMLContent('html_sections/corporative_services.html', 'content2');
+  });
   </script>
 
 </body>
